@@ -1,4 +1,4 @@
-module.exports = {
+module.exports ={
     JWTSECRET : "chshfgdhshfgf",
     APP_PASSWORD : "fsnyftagydwjckvx",
     APP_EMAIL : "exception153@gmail.com",

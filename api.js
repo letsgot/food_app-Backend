@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
 // npm i cookie parser
 const cookieParser = require("cookie-parser");
@@ -77,7 +77,7 @@ app.get("/api/v1/allReviews", async (req,res) => {
 })
 
 // locahost:3000 -> express API
-const port = process.env || 3000; 
+const port = process.env.PORT||3000;
 app.listen(port, function () {
     console.log("server started at port 3000");
 })
