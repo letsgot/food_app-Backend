@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const app = express();
 // npm i cookie parser
 const cookieParser = require("cookie-parser");
@@ -12,6 +13,7 @@ const planRouter = require("./routes/planRoutes");
 const reviewModel = require("./model/reviewModel");
 const planModel = require("./model/planModel");
 
+app.use(cors());
 
 // to  add post body data to req.body
 app.use(express.json());
@@ -74,8 +76,9 @@ app.get("/api/v1/allReviews", async (req,res) => {
     }
 })
 
-// locahost:3000 -> express API 
-app.listen(3000, function () {
+// locahost:3000 -> express API
+const port = process.env || 3000; 
+app.listen(port, function () {
     console.log("server started at port 3000");
 })
 
